@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>World Happiness Report</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 jumbotron custom-jumbotron text-center">
+        <h2>World Happiness Dashboard </br>2015-2023</h2>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center" style="height:100vh;">
+      <div class="col-md-2 text-center">
+        <div class="well text-center">
+          <h5> Country Name:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Country Bliss Info</h3>
+          </div>
+          <div id="countryPanel" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+       <div class="col-md-5">
+        <div id="line" width="400" height="500"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <canvas id="radarChart" width="500" height="500"></canvas>
+        </div>
+        <div class="col-md-6">
+          <canvas id="lineChart" width="600" height="400"></canvas>
+        </div>
+  </div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./logic.js"></script>
+</body>
+</html>
+</body>
+</html>
